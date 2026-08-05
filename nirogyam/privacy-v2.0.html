@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirogyam 2.0 | Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #7A8B69 0%, #3E2723 100%);
+            min-height: 100vh;
+            color: #3E2723;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .card {
+            background: #F5F0E8;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 24px;
+        }
+        h1 {
+            font-size: 2em;
+            color: #C75B12;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #7A8B69;
+            font-size: 0.95em;
+            margin-bottom: 24px;
+        }
+        h2 {
+            font-size: 1.2em;
+            color: #3E2723;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+        p {
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 12px;
+        }
+        ul { padding-left: 20px; margin-bottom: 16px; }
+        li {
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 6px;
+        }
+        a { color: #C75B12; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .notice {
+            background: rgba(122, 139, 105, 0.12);
+            border-left: 4px solid #7A8B69;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+        }
+        .notice p { margin: 0; }
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        .nav {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .nav a {
+            color: white;
+            margin: 0 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 560px) {
+            .container { padding: 24px 12px; }
+            .card { padding: 28px 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">Support</a>
+            <a href="privacy-v2.0.html" aria-current="page">Privacy Policy</a>
+        </div>
+
+        <div class="card">
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">For Nirogyam version 2.0 and later &middot; Last updated: August 5, 2026</p>
+
+            <div class="notice">
+                <p><strong>In short:</strong> Nirogyam has no advertising or third-party tracking. Your core data stays on your device. If private iCloud backup is enabled, only profiles and practice history are sent directly to your private iCloud account, where Anagh Tech cannot view them.</p>
+            </div>
+
+            <h2>Overview</h2>
+            <p>Nirogyam is a personal rhythm companion grounded in Ayurvedic sources. This policy explains what the app stores, which optional Apple services it uses, and the choices available to you. Nirogyam provides educational wellness guidance and is not a medical service.</p>
+
+            <h2>Data Stored on Your Device</h2>
+            <p>Depending on the features you use, Nirogyam stores the following locally:</p>
+            <ul>
+                <li>profiles you create, including a name, adult or child profile type, authored order, and dosha assessment;</li>
+                <li>practice completions, routine progress, Garden state, reminder preferences, and app preferences;</li>
+                <li>journal entries you choose to write; and</li>
+                <li>temporary state needed for widgets, shortcuts, and app operation.</li>
+            </ul>
+            <p>Nirogyam does not require a Nirogyam account. Local app data is removed when you delete the app, subject to iOS behavior. A private iCloud backup, if present, is separate and may remain until you turn that feature off in the app.</p>
+
+            <h2>Private iCloud Backup</h2>
+            <p>Nirogyam can back up profiles and practice history to your private iCloud database using Apple CloudKit. The backup is associated with the iCloud account signed in on your device and counts against that account's iCloud storage quota.</p>
+            <ul>
+                <li>The backup contains profiles and practice-completion history.</li>
+                <li>It does not contain journal entries, AI conversations, raw HealthKit samples, reminder settings, or widget snapshots.</li>
+                <li>The backup payload is stored using CloudKit encrypted values.</li>
+                <li>Anagh Tech cannot inspect your private database or use its contents for analytics, advertising, or profiling.</li>
+            </ul>
+            <p>You can turn private backup off in Settings. Nirogyam then asks CloudKit to delete its backup without deleting local data. If iCloud is temporarily unavailable, the deletion remains pending and is retried when the app can reach iCloud again.</p>
+
+            <h2>HealthKit and Sleep</h2>
+            <p>For an adult profile, Nirogyam may ask for permission to read sleep information from Apple Health so it can choose a standard or gentler daily plan. Permission is optional and can be changed in iOS Settings.</p>
+            <ul>
+                <li>Raw sleep samples are reduced on your device to a coarse current-day signal.</li>
+                <li>Raw HealthKit data is not stored in Nirogyam's databases, included in iCloud backup or export, logged for analytics, or sent to Anagh Tech.</li>
+                <li>Child profiles do not use the device owner's HealthKit data.</li>
+                <li>Nirogyam does not write data to HealthKit.</li>
+            </ul>
+
+            <h2>On-Device AI</h2>
+            <p>On compatible Apple devices, Nirogyam uses Apple's on-device Foundation Models framework for supported AI features. Prompts and generated responses are processed on the device and are not sent to Anagh Tech or a third-party AI provider. When on-device AI is unavailable, the app uses bundled, grounded fallback guidance.</p>
+
+            <h2>Data Export</h2>
+            <p>You can create a human-readable JSON export from Settings. The export contains profiles, practice history, and structured journal entries. It is generated on your device and passed to the iOS share or file interface. Nirogyam does not upload it. You control where the exported file is saved or shared.</p>
+
+            <h2>Internet and Apple Services</h2>
+            <p>The core routine, Garden, curated library, and on-device guidance work without an internet connection. Network access is used when private iCloud backup or restore communicates directly with Apple CloudKit. Apple services are governed by Apple's own terms and privacy policy.</p>
+
+            <h2>Analytics, Advertising, and Tracking</h2>
+            <p>Nirogyam does not include third-party analytics or advertising SDKs, does not display ads, does not track you across apps or websites, and does not sell or broker personal data. The app uses local system logging and Apple's operating-system diagnostics for development and reliability; Nirogyam does not send profile, journal, HealthKit, or AI content through those logs.</p>
+
+            <h2>Children's Privacy</h2>
+            <p>Nirogyam supports child profiles created and managed on the device. It does not create online accounts for children or request a child's email address, phone number, or precise location. AI entry points are suppressed for child profiles, and the device owner's HealthKit data is not applied to them. A parent or guardian should supervise a child's use of the app and the device's iCloud account.</p>
+
+            <h2>Your Choices and Deletion</h2>
+            <ul>
+                <li>You can decline or revoke HealthKit access in iOS Settings.</li>
+                <li>You can turn reminders off in Nirogyam or iOS Settings.</li>
+                <li>You can export your data from Nirogyam Settings.</li>
+                <li>You can turn private iCloud backup off and request deletion of the cloud copy without deleting local data.</li>
+                <li>You can remove local Nirogyam data by deleting the app. Turn private backup off first if you also want its iCloud backup removed.</li>
+            </ul>
+
+            <h2>Changes to This Policy</h2>
+            <p>If Nirogyam's data practices change, we will update this page and its last-updated date. Material changes will be reflected in the policy associated with the relevant app release.</p>
+
+            <h2>Contact Us</h2>
+            <p>For privacy questions or support, contact:</p>
+            <p><strong>Email:</strong> <a href="mailto:anagh.techn@gmail.com">anagh.techn@gmail.com</a></p>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Anagh Tech. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
