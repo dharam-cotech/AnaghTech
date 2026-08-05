@@ -117,7 +117,7 @@
             <ul>
                 <li>The backup contains profiles and practice-completion history.</li>
                 <li>It does not contain journal entries, AI conversations, raw HealthKit samples, reminder settings, or widget snapshots.</li>
-                <li>The backup payload is stored using CloudKit encrypted values.</li>
+                <li>The backup payload is stored as an asset that CloudKit encrypts automatically in the private database.</li>
                 <li>Anagh Tech cannot inspect your private database or use its contents for analytics, advertising, or profiling.</li>
             </ul>
             <p>You can turn private backup off in Settings. Nirogyam then asks CloudKit to delete its backup without deleting local data. If iCloud is temporarily unavailable, the deletion remains pending and is retried when the app can reach iCloud again.</p>
