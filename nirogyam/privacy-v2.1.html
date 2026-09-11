@@ -101,7 +101,7 @@
             <p class="subtitle">For Nirogyam version 2.1 &middot; Last updated: September 11, 2026</p>
 
             <div class="notice">
-                <p>Nirogyam has no advertising or third-party tracking. Data is stored on your device. Optional private iCloud backup sends profiles and practice history to your private iCloud account. You can also choose to export and share your data or a separate Product Research summary.</p>
+                <p>Nirogyam has no advertising or third-party tracking. Your personal routine data is stored on your device. Analytics-enabled 2.1 builds offer optional basic usage sharing with PostHog for adult profiles, described below. Optional private iCloud backup sends profiles and practice history to your private iCloud account. You can also choose to export and share your data or a separate Product Research summary.</p>
             </div>
 
             <h2>Overview</h2>
@@ -153,19 +153,27 @@
             </ul>
             <p>The summary does not contain profile names or identifiers, raw HealthKit samples, journal entries, or AI conversations. It is not included in Nirogyam's private CloudKit backup. Dates, times, and practice counts can reveal usage patterns, so the file should not be treated as anonymous.</p>
             <p>Nirogyam does not send this summary to Anagh Tech automatically. You can choose to export it from Settings &rarr; Data &amp; privacy &rarr; Product Research through the system file interface. The export includes the summary, derived measures, and the time the export was generated. You control where the file is saved and whether it is shared.</p>
-            <p>If you choose to share an export during a TestFlight study, the study organizer receives that file. Sharing is optional. For questions about a copy shared with Anagh Tech, including a request to delete it, contact the email below. Deleting the app does not delete copies you have saved or shared elsewhere.</p>
+            <p>For the 2.1 release study, Anagh Tech will not collect Product Research export files or ask for screenshots or transcriptions of them. You may still export a summary for your own use. Deleting the app does not delete copies you have saved or shared elsewhere.</p>
 
             <h2>Internet and Apple Services</h2>
-            <p>The core routine, Garden, curated library, and on-device guidance work without an internet connection. Network access is used when private iCloud backup or restore communicates directly with Apple CloudKit. Apple services are governed by Apple's own terms and privacy policy.</p>
+            <p>The core routine, Garden, curated library, and on-device guidance work without an internet connection. Network access is used when private iCloud backup or restore communicates directly with Apple CloudKit, and for PostHog events if you enable optional usage sharing in an analytics-enabled build. Apple services are governed by Apple's own terms and privacy policy.</p>
+
+            <h2>Optional PostHog Usage Analytics</h2>
+            <p>Build 14 and earlier 2.1 test builds have local Product Research only. Later analytics-enabled 2.1 builds offer an optional “Help improve Nirogyam” switch during adult setup and in Settings &rarr; Data &amp; privacy. It is off by default. Declining does not limit app features.</p>
+            <p>With your choice enabled and an adult profile active, Nirogyam sends basic events to PostHog to help Anagh Tech understand setup completion, feature use, and return visits. Events cover plan setup, main tab selection, practice-screen and guided-session actions, saved completion or Undo, Later/Skip, plan changes, explanation opens, reminder opens, and app activity. They include an event time, app version/build, and a randomly generated device-level analytics identifier. Multiple adult profiles on a device share this identifier. These events are pseudonymous, not fully anonymous.</p>
+            <p>Events do not include your name, local profile identifiers or type, practice identifiers, assessment results or answers, HealthKit data, sleep-derived signals, journals, AI text, notification contents, or advertising identifiers. Nirogyam does not record screens, touches, or sessions automatically. Child-profile and pre-consent activity is excluded and is not saved for later upload.</p>
+            <p>The app requests that PostHog skip person-profile creation and IP-based location enrichment and sends an empty event IP property. PostHog necessarily receives the network source IP while servicing HTTPS requests. Its cloud infrastructure and processing are also described in <a href="https://posthog.com/privacy">PostHog’s privacy policy</a>.</p>
+            <p>Switching to a child profile pauses collection and cancels pending requests. Turning usage sharing off stops future collection, cancels pending requests, and removes the local analytics identifier; opting in again creates a new one. Events already received by PostHog are not deleted by this switch. Requests are best effort, with no saved offline event queue. Contact Anagh Tech below for questions about previously collected events or deletion; without identifying information we may be unable to associate an event with a particular person.</p>
 
             <h2>Analytics, Advertising, and Tracking</h2>
-            <p>Nirogyam does not include third-party analytics or advertising SDKs, does not display ads, does not track you across apps or websites, and does not sell or broker personal data. The local Product Research summary is described above. The app also uses local system logging and Apple's operating-system diagnostics for development and reliability; Nirogyam does not send profile, journal, HealthKit, or AI content through those logs.</p>
+            <p>Nirogyam does not include third-party analytics or advertising SDKs, does not display ads, does not track you across apps or websites, and does not sell or broker personal data. Optional PostHog collection uses the service’s HTTPS API, as described above, independently of the local Product Research summary. The app also uses local system logging and Apple's operating-system diagnostics for development and reliability; Nirogyam does not send profile, journal, HealthKit, or AI content through those logs.</p>
 
             <h2>Children's Privacy</h2>
             <p>Nirogyam supports child profiles created and managed on the device. It does not create online accounts for children or request a child's email address, phone number, or precise location. AI entry points are suppressed for child profiles, and the device owner's HealthKit data is not applied to them. A parent or guardian should supervise a child's use of the app and the device's iCloud account.</p>
 
             <h2>Your Choices and Deletion</h2>
             <ul>
+                <li>You can decline optional PostHog usage sharing, or turn it off in Settings &rarr; Data &amp; privacy. Previously received events are separate from local deletion.</li>
                 <li>You can decline or revoke HealthKit access in iOS Settings.</li>
                 <li>You can turn reminders off in Nirogyam or iOS Settings.</li>
                 <li>You can export your data or the separate Product Research summary from Nirogyam Settings. Neither export is shared automatically.</li>
