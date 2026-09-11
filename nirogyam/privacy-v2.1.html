@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nirogyam 2.0 | Privacy Policy</title>
+    <title>Nirogyam 2.1 | Privacy Policy</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -11,6 +11,7 @@
             background: linear-gradient(135deg, #7A8B69 0%, #3E2723 100%);
             min-height: 100vh;
             color: #3E2723;
+            overflow-wrap: anywhere;
         }
         .container {
             max-width: 760px;
@@ -26,11 +27,11 @@
         }
         h1 {
             font-size: 2em;
-            color: #C75B12;
+            color: #A3440C;
             margin-bottom: 8px;
         }
         .subtitle {
-            color: #7A8B69;
+            color: #566448;
             font-size: 0.95em;
             margin-bottom: 24px;
         }
@@ -53,7 +54,7 @@
             color: #555;
             margin-bottom: 6px;
         }
-        a { color: #C75B12; text-decoration: none; }
+        a { color: #A3440C; text-decoration: underline; overflow-wrap: anywhere; }
         a:hover { text-decoration: underline; }
         .notice {
             background: rgba(122, 139, 105, 0.12);
@@ -70,6 +71,10 @@
             font-size: 0.9em;
         }
         .nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
             text-align: center;
             margin-bottom: 24px;
         }
@@ -87,16 +92,16 @@
 <body>
     <div class="container">
         <div class="nav">
-            <a href="index.html">Support</a>
-            <a href="privacy-v2.0.html" aria-current="page">Privacy Policy</a>
+            <a href="support-v2.1.html">Support</a>
+            <a href="privacy-v2.1.html" aria-current="page">Privacy Policy</a>
         </div>
 
         <div class="card">
             <h1>Privacy Policy</h1>
-            <p class="subtitle">For Nirogyam version 2.0 and later &middot; Last updated: August 5, 2026</p>
+            <p class="subtitle">For Nirogyam version 2.1 &middot; Last updated: September 11, 2026</p>
 
             <div class="notice">
-                <p><strong>In short:</strong> Nirogyam has no advertising or third-party tracking. Your core data stays on your device. If private iCloud backup is enabled, only profiles and practice history are sent directly to your private iCloud account, where Anagh Tech cannot view them.</p>
+                <p>Nirogyam has no advertising or third-party tracking. Data is stored on your device. Optional private iCloud backup sends profiles and practice history to your private iCloud account. You can also choose to export and share your data or a separate Product Research summary.</p>
             </div>
 
             <h2>Overview</h2>
@@ -107,7 +112,8 @@
             <ul>
                 <li>profiles you create, including a name, adult or child profile type, authored order, and dosha assessment;</li>
                 <li>practice completions, routine progress, Garden state, reminder preferences, and app preferences;</li>
-                <li>journal entries you choose to write; and</li>
+                <li>journal entries you choose to write;</li>
+                <li>a local Product Research summary, described below; and</li>
                 <li>temporary state needed for widgets, shortcuts, and app operation.</li>
             </ul>
             <p>Nirogyam does not require a Nirogyam account. Local app data is removed when you delete the app, subject to iOS behavior. A private iCloud backup, if present, is separate and may remain until you turn that feature off in the app.</p>
@@ -116,7 +122,7 @@
             <p>Nirogyam can back up profiles and practice history to your private iCloud database using Apple CloudKit. The backup is associated with the iCloud account signed in on your device and counts against that account's iCloud storage quota.</p>
             <ul>
                 <li>The backup contains profiles and practice-completion history.</li>
-                <li>It does not contain journal entries, AI conversations, raw HealthKit samples, reminder settings, or widget snapshots.</li>
+                <li>It does not contain journal entries, AI conversations, raw HealthKit samples, reminder settings, widget snapshots, or the Product Research summary.</li>
                 <li>The backup payload is stored as an asset that CloudKit encrypts automatically in the private database.</li>
                 <li>Anagh Tech cannot inspect your private database or use its contents for analytics, advertising, or profiling.</li>
             </ul>
@@ -135,13 +141,25 @@
             <p>On compatible Apple devices, Nirogyam uses Apple's on-device Foundation Models framework for supported AI features. Prompts and generated responses are processed on the device and are not sent to Anagh Tech or a third-party AI provider. When on-device AI is unavailable, the app uses bundled, grounded fallback guidance.</p>
 
             <h2>Data Export</h2>
-            <p>You can create a human-readable JSON export from Settings. The export contains profiles, practice history, and structured journal entries. It is generated on your device and passed to the iOS share or file interface. Nirogyam does not upload it. You control where the exported file is saved or shared.</p>
+            <p>You can create a human-readable JSON export from Settings. The export contains profiles, practice history, and structured journal entries. It is generated on your device and passed to the iOS share or file interface. Nirogyam does not upload it. You control where the exported file is saved or shared. The Product Research summary is a separate export and is not included in this data export.</p>
+
+            <h2 id="product-research">Local Product Research Summary</h2>
+            <p>Starting in version 2.1, Nirogyam automatically keeps a small product-research summary on your device to help evaluate the daily experience. No separate research account is required. The summary contains:</p>
+            <ul>
+                <li>counts of app events, such as launches, onboarding completion, practice actions, plan changes, Later and Skip choices, opening recommendation explanations, and reminder interactions;</li>
+                <li>practice identifiers and counts of completion actions for each practice;</li>
+                <li>dates on which the app was used, the first and most recent recorded activity times, and the times of onboarding completion and the first practice completion, when available; and</li>
+                <li>derived measures such as the number of active days and whether the app was used again one or seven days after first use.</li>
+            </ul>
+            <p>The summary does not contain profile names or identifiers, raw HealthKit samples, journal entries, or AI conversations. It is not included in Nirogyam's private CloudKit backup. Dates, times, and practice counts can reveal usage patterns, so the file should not be treated as anonymous.</p>
+            <p>Nirogyam does not send this summary to Anagh Tech automatically. You can choose to export it from Settings &rarr; Data &amp; privacy &rarr; Product Research through the system file interface. The export includes the summary, derived measures, and the time the export was generated. You control where the file is saved and whether it is shared.</p>
+            <p>If you choose to share an export during a TestFlight study, the study organizer receives that file. Sharing is optional. For questions about a copy shared with Anagh Tech, including a request to delete it, contact the email below. Deleting the app does not delete copies you have saved or shared elsewhere.</p>
 
             <h2>Internet and Apple Services</h2>
             <p>The core routine, Garden, curated library, and on-device guidance work without an internet connection. Network access is used when private iCloud backup or restore communicates directly with Apple CloudKit. Apple services are governed by Apple's own terms and privacy policy.</p>
 
             <h2>Analytics, Advertising, and Tracking</h2>
-            <p>Nirogyam does not include third-party analytics or advertising SDKs, does not display ads, does not track you across apps or websites, and does not sell or broker personal data. The app uses local system logging and Apple's operating-system diagnostics for development and reliability; Nirogyam does not send profile, journal, HealthKit, or AI content through those logs.</p>
+            <p>Nirogyam does not include third-party analytics or advertising SDKs, does not display ads, does not track you across apps or websites, and does not sell or broker personal data. The local Product Research summary is described above. The app also uses local system logging and Apple's operating-system diagnostics for development and reliability; Nirogyam does not send profile, journal, HealthKit, or AI content through those logs.</p>
 
             <h2>Children's Privacy</h2>
             <p>Nirogyam supports child profiles created and managed on the device. It does not create online accounts for children or request a child's email address, phone number, or precise location. AI entry points are suppressed for child profiles, and the device owner's HealthKit data is not applied to them. A parent or guardian should supervise a child's use of the app and the device's iCloud account.</p>
@@ -150,7 +168,7 @@
             <ul>
                 <li>You can decline or revoke HealthKit access in iOS Settings.</li>
                 <li>You can turn reminders off in Nirogyam or iOS Settings.</li>
-                <li>You can export your data from Nirogyam Settings.</li>
+                <li>You can export your data or the separate Product Research summary from Nirogyam Settings. Neither export is shared automatically.</li>
                 <li>You can turn private iCloud backup off and request deletion of the cloud copy without deleting local data.</li>
                 <li>You can remove local Nirogyam data by deleting the app. Turn private backup off first if you also want its iCloud backup removed.</li>
             </ul>
