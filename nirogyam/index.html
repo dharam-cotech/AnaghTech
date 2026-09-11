@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nirogyam — Your Complete Ayurveda Guide | Support</title>
+    <title>Nirogyam — Your Daily Rhythm Companion | Support</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -11,6 +11,7 @@
             background: linear-gradient(135deg, #7A8B69 0%, #3E2723 100%);
             min-height: 100vh;
             color: #3E2723;
+            overflow-wrap: anywhere;
         }
         .container {
             max-width: 700px;
@@ -26,11 +27,11 @@
         }
         h1 {
             font-size: 2em;
-            color: #C75B12;
+            color: #A3440C;
             margin-bottom: 8px;
         }
         .subtitle {
-            color: #7A8B69;
+            color: #566448;
             font-size: 1.1em;
             margin-bottom: 24px;
             font-style: italic;
@@ -48,7 +49,7 @@
         }
         ul { padding-left: 20px; margin-bottom: 16px; }
         li { margin-bottom: 6px; }
-        a { color: #C75B12; text-decoration: none; }
+        a { color: #A3440C; text-decoration: underline; overflow-wrap: anywhere; }
         a:hover { text-decoration: underline; }
         .emoji { font-size: 3em; margin-bottom: 16px; display: block; }
         .contact-box {
@@ -75,6 +76,10 @@
             font-size: 0.9em;
         }
         .nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
             text-align: center;
             margin-bottom: 24px;
         }
@@ -83,31 +88,34 @@
             margin: 0 12px;
             font-weight: 600;
         }
+        @media (max-width: 560px) {
+            .container { padding: 24px 12px; }
+            .card { padding: 28px 22px; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="nav">
-            <a href="index.html">Support</a>
-            <a href="privacy.html">Privacy Policy</a>
+            <a href="index.html" aria-current="page">Support</a>
+            <a href="privacy-v2.0.html">Privacy Policy</a>
         </div>
 
         <div class="card">
             <span class="emoji">🍃🪷</span>
             <h1>Nirogyam</h1>
-            <p class="subtitle">Your Complete Ayurveda Guide</p>
+            <p class="subtitle">Your Daily Rhythm Companion</p>
 
-            <p>Nirogyam (निरोग्यम् — "The Disease-Free State") is a complete Ayurveda guide app that helps you align your daily routines, diet, and wellness practices with ancient Ayurvedic wisdom. Discover seasonal regimens, kitchen remedies, body constitution analysis, and more — all completely offline and private.</p>
+            <p>Nirogyam helps you build a daily rhythm through small wellness practices grounded in Ayurvedic sources. Follow your daily plan, explore the reasons behind each practice, and see your progress in the Garden.</p>
 
             <h2>Features</h2>
             <ul>
-                <li><strong>Dinacharya</strong> — Daily routines aligned with Ayurvedic principles</li>
-                <li><strong>Ahara (Kitchen Pharmacy)</strong> — 20 spices and 30 remedies from your kitchen</li>
-                <li><strong>Prakriti</strong> — Dosha Quiz and Body Map to understand your constitution</li>
-                <li><strong>Nirogyam (Seasonal Living)</strong> — Seasonal regimens for balanced wellness</li>
-                <li><strong>Chikitsa</strong> — Gharelu Remedies, Saundarya Vigyan, Panchagavya, Mudra, and Nabhi therapies</li>
-                <li><strong>Ayushcharya Calendar</strong> — Hindu dates, Nakshatra plants, and Rashi guides</li>
-                <li><strong>AI Vaidya Companion</strong> — On-device AI powered by Apple FoundationModels, fully private</li>
+                <li><strong>Daily plan</strong> — Suggested practices with options to complete, defer, or skip</li>
+                <li><strong>Garden</strong> — A visual reflection of your practice history</li>
+                <li><strong>Prakriti</strong> — A dosha assessment to explore your constitution</li>
+                <li><strong>Library and guidance</strong> — Curated educational content and explanations</li>
+                <li><strong>Profiles</strong> — Separate adult and child profiles on your device</li>
+                <li><strong>Optional Apple services</strong> — Private iCloud backup and an adult sleep connection through Apple Health</li>
             </ul>
 
             <h2>Need Help?</h2>
@@ -123,11 +131,12 @@
 
             <h2>FAQ</h2>
             <ul>
-                <li><strong>Is the app free?</strong> — Yes, Nirogyam is completely free. No subscriptions, no in-app purchases.</li>
-                <li><strong>Does it work offline?</strong> — Yes, 100% offline. No internet connection needed.</li>
-                <li><strong>Is it safe for children?</strong> — Yes, Nirogyam is family-friendly and safe for all ages.</li>
-                <li><strong>Does it show ads?</strong> — No, never. The app is completely ad-free.</li>
-                <li><strong>Is the AI private?</strong> — Yes, all AI processing happens on your device using Apple FoundationModels. No data is ever sent to any server.</li>
+                <li><strong>Is the app free?</strong> — Version 2.1 is free, with no subscriptions or in-app purchases.</li>
+                <li><strong>Does it work offline?</strong> — The core daily plan, Garden, and curated guidance work offline. Optional private iCloud backup and restore need an internet connection.</li>
+                <li><strong>Can I create a child profile?</strong> — Yes. A parent or guardian should supervise use. Child profiles do not use the device owner's Health data, and AI entry points are hidden for them. Guidance is educational, not medical advice.</li>
+                <li><strong>Does it show ads?</strong> — No. Nirogyam does not display ads.</li>
+                <li><strong>Is the AI private?</strong> — Supported AI features use Apple's on-device Foundation Models on compatible devices. AI prompts and responses are not sent to Anagh Tech or a third-party AI provider. Bundled guidance is available when on-device AI is unavailable.</li>
+                <li><strong>What data is stored or shared?</strong> — Profiles, practice history, and a Product Research summary are stored locally. Private iCloud backup and file sharing are optional. See the <a href="privacy-v2.0.html">current privacy policy</a> for details.</li>
             </ul>
 
             <div class="disclaimer">

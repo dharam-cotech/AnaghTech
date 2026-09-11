@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nirogyam — Your Complete Ayurveda Guide | Privacy Policy</title>
+    <title>Nirogyam | Archived Privacy Policy</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -11,6 +11,7 @@
             background: linear-gradient(135deg, #7A8B69 0%, #3E2723 100%);
             min-height: 100vh;
             color: #3E2723;
+            overflow-wrap: anywhere;
         }
         .container {
             max-width: 700px;
@@ -26,11 +27,11 @@
         }
         h1 {
             font-size: 2em;
-            color: #C75B12;
+            color: #A3440C;
             margin-bottom: 8px;
         }
         .subtitle {
-            color: #7A8B69;
+            color: #566448;
             font-size: 0.95em;
             margin-bottom: 24px;
         }
@@ -53,8 +54,16 @@
             color: #555;
             margin-bottom: 6px;
         }
-        a { color: #C75B12; text-decoration: none; }
+        a { color: #A3440C; text-decoration: underline; overflow-wrap: anywhere; }
         a:hover { text-decoration: underline; }
+        .notice {
+            background: rgba(122, 139, 105, 0.12);
+            border-left: 4px solid #7A8B69;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+        }
+        .notice p { margin: 0; }
         .footer {
             text-align: center;
             color: rgba(255,255,255,0.7);
@@ -62,6 +71,10 @@
             font-size: 0.9em;
         }
         .nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
             text-align: center;
             margin-bottom: 24px;
         }
@@ -70,18 +83,25 @@
             margin: 0 12px;
             font-weight: 600;
         }
+        @media (max-width: 560px) {
+            .container { padding: 24px 12px; }
+            .card { padding: 28px 22px; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="nav">
             <a href="index.html">Support</a>
-            <a href="privacy.html">Privacy Policy</a>
+            <a href="privacy-v2.0.html">Current Privacy Policy</a>
         </div>
 
         <div class="card">
-            <h1>Privacy Policy</h1>
-            <p class="subtitle">Last updated: March 16, 2026</p>
+            <h1>Archived Privacy Policy</h1>
+            <p class="subtitle">Historical policy &middot; Last updated: March 16, 2026</p>
+            <div class="notice">
+                <p>This page preserves the policy for earlier releases. For Nirogyam version 2.0 and later, including version 2.1, read the <a href="privacy-v2.0.html">current privacy policy</a>, which covers private iCloud backup, HealthKit, exports, and the local Product Research summary.</p>
+            </div>
 
             <h2>Overview</h2>
             <p>Nirogyam (निरोग्यम् — "Your Complete Ayurveda Guide") is a comprehensive Ayurveda guide app designed for users of all ages, including families with children. We take your privacy extremely seriously. This policy explains how we handle data in our app.</p>
