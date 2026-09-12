@@ -98,7 +98,7 @@
 
         <div class="card">
             <h1>Privacy Policy</h1>
-            <p class="subtitle">For Nirogyam version 2.1 &middot; Last updated: September 11, 2026</p>
+            <p class="subtitle">For Nirogyam version 2.1 &middot; Last updated: September 12, 2026</p>
 
             <div class="notice">
                 <p>Nirogyam has no advertising or third-party tracking. Your personal routine data is stored on your device. Analytics-enabled 2.1 builds offer optional basic usage sharing with PostHog for adult profiles, described below. Optional private iCloud backup sends profiles and practice history to your private iCloud account. You can also choose to export and share your data or a separate Product Research summary.</p>
@@ -113,6 +113,7 @@
                 <li>profiles you create, including a name, adult or child profile type, authored order, and dosha assessment;</li>
                 <li>practice completions, routine progress, Garden state, reminder preferences, and app preferences;</li>
                 <li>journal entries you choose to write;</li>
+                <li>manual sleep entries and local identifiers used to avoid suggesting the same Health walk again;</li>
                 <li>a local Product Research summary, described below; and</li>
                 <li>temporary state needed for widgets, shortcuts, and app operation.</li>
             </ul>
@@ -122,19 +123,21 @@
             <p>Nirogyam can back up profiles and practice history to your private iCloud database using Apple CloudKit. The backup is associated with the iCloud account signed in on your device and counts against that account's iCloud storage quota.</p>
             <ul>
                 <li>The backup contains profiles and practice-completion history.</li>
-                <li>It does not contain journal entries, AI conversations, raw HealthKit samples, reminder settings, widget snapshots, or the Product Research summary.</li>
+                <li>It does not contain journal entries, AI conversations, raw HealthKit samples, manual sleep times, Health walk identifiers, reminder settings, widget snapshots, or the Product Research summary.</li>
                 <li>The backup payload is stored as an asset that CloudKit encrypts automatically in the private database.</li>
                 <li>Anagh Tech cannot inspect your private database or use its contents for analytics, advertising, or profiling.</li>
             </ul>
             <p>You can turn private backup off in Settings. Nirogyam then asks CloudKit to delete its backup without deleting local data. If iCloud is temporarily unavailable, the deletion remains pending and is retried when the app can reach iCloud again.</p>
 
-            <h2>HealthKit and Sleep</h2>
-            <p>For an adult profile, Nirogyam may ask for permission to read sleep information from Apple Health so it can choose a standard or gentler daily plan. Permission is optional and can be changed in iOS Settings.</p>
+            <h2>Apple Health and Manual Activity</h2>
+            <p>For the adult profile belonging to the device owner, Nirogyam may ask separately to read sleep information to help adapt a routine and walking workouts to suggest completed walks. Permission is optional. Core features and manual practice logging work without Health access.</p>
             <ul>
-                <li>Raw sleep samples are reduced on your device to a coarse current-day signal.</li>
-                <li>Raw HealthKit data is not stored in Nirogyam's databases, included in iCloud backup or export, logged for analytics, or sent to Anagh Tech.</li>
-                <li>Child profiles do not use the device owner's HealthKit data.</li>
-                <li>Nirogyam does not write data to HealthKit.</li>
+                <li>Sleep samples are reduced on-device to a coarse current-day signal. Walking workouts are checked when you return to the app; you confirm whether a suggested walk counts.</li>
+                <li>Raw Health samples are processed in memory. Local workout identifiers prevent repeated suggestions. Manual sleep times and these identifiers are stored in a protected file excluded from device backup, app export, and private iCloud backup.</li>
+                <li>Manual sleep is optional for adult profiles. You can replace or delete entries in Today &rarr; Log activity or sleep. Manual sleep for today takes priority over Health sleep and is not counted as a Garden practice.</li>
+                <li>Manually logged practices and confirmed Health walks become ordinary practice-completion history. They can appear in your user-controlled export or private iCloud practice backup, without workout identifiers, source details, or sleep times.</li>
+                <li>Health details, manual sleep, and these logging actions are not sent to PostHog. Child profiles do not use the device owner's HealthKit data.</li>
+                <li>Nirogyam does not write data to HealthKit. Disconnecting in the app stops future reads; you can also change read permissions in Apple Health or iOS Settings.</li>
             </ul>
 
             <h2>On-Device AI</h2>
