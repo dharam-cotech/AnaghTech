@@ -101,7 +101,7 @@
             <p class="subtitle">For Nirogyam version 2.2 &middot; Last updated: September 15, 2026</p>
 
             <div class="notice">
-                <p>Nirogyam has no advertising or third-party tracking. Your personal routine data is stored on your device. Version 2.2 offers optional basic usage sharing with PostHog for adult profiles, described below. Optional private iCloud backup sends profiles and practice history to your private iCloud account. You can also choose to export and share your data or a separate Product Research summary.</p>
+                <p>Nirogyam has no advertising or third-party tracking. Your personal routine data is stored on your device. Version 2.2 offers optional basic usage sharing with PostHog for adult profiles, described below. Optional private iCloud backup sends profiles and practice history to your private iCloud account. You can also choose to export and share your data or a personal summary.</p>
             </div>
 
             <h2>Overview</h2>
@@ -160,8 +160,8 @@
                 <li>derived measures such as the number of active days and whether the app was used again one or seven days after first use.</li>
             </ul>
             <p>The summary does not contain profile names or identifiers, raw HealthKit samples, journal entries, or AI conversations. It is not included in Nirogyam's private CloudKit backup. Dates, times, and practice counts can reveal usage patterns, so the file should not be treated as anonymous.</p>
-            <p>Nirogyam does not send this summary to Anagh Tech automatically. You can choose to export it from Settings &rarr; Data &amp; privacy &rarr; Product Research through the system file interface. The export includes the summary, derived measures, and the time the export was generated. You control where the file is saved and whether it is shared.</p>
-            <p>Anagh Tech does not collect Product Research export files automatically. You may still export a summary for your own use. Deleting the app does not delete copies you have saved or shared elsewhere.</p>
+            <p>Nirogyam does not send this summary to Anagh Tech automatically. Developer builds may expose a separate research export for local testing; this control is hidden in the customer release.</p>
+            <p>Anagh Tech does not collect Product Research export files automatically. Personal PDF and CSV summaries are separate from this internal research record. Deleting the app does not delete copies you have saved or shared elsewhere.</p>
 
             <h2>Internet and Apple Services</h2>
             <p>The core routine, Garden, curated library, and on-device guidance work without an internet connection. Network access is used when private iCloud backup or restore communicates directly with Apple CloudKit, and for PostHog events if you enable optional usage sharing in an analytics-enabled build. Apple services are governed by Apple's own terms and privacy policy.</p>
@@ -184,7 +184,7 @@
                 <li>You can decline optional PostHog usage sharing, or turn it off in Settings &rarr; Data &amp; privacy. Previously received events are separate from local deletion.</li>
                 <li>You can decline or revoke HealthKit access in iOS Settings.</li>
                 <li>You can turn reminders off in Nirogyam or iOS Settings.</li>
-                <li>You can export your data or the separate Product Research summary from Nirogyam Settings. Neither export is shared automatically.</li>
+                <li>You can export your data or a personal PDF/CSV summary from Nirogyam Settings. No export is shared automatically.</li>
                 <li>You can turn private iCloud backup off and request deletion of the cloud copy without deleting local data.</li>
                 <li>In You &rarr; Data &amp; privacy, you can delete a single profile or erase all Nirogyam data. Profile deletion keeps other profiles and the shared journal. Full erasure removes local personal records, check-ins, manual sleep, reminders and widget data, stops optional analytics and returns the app to setup. The corresponding private iCloud backup data is also removed. If cloud deletion cannot finish, the app reports the problem and lets you retry; backup and restore remain paused while deletion is unfinished.</li>
                 <li>Deletion does not erase Apple Health records, files already exported, copies on other devices, or analytics already received by PostHog.</li>
