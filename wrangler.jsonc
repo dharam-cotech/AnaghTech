@@ -1,0 +1,9 @@
+{
+  "name": "dharmendra-labs",
+  "compatibility_date": "2026-09-16",
+  "assets": {
+    "directory": "./cloudflare/public",
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
