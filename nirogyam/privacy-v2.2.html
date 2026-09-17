@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nirogyam 2.2 | Privacy Policy</title>
+    <title>Nirogyam 2.3 | Privacy Policy</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -98,10 +98,10 @@
 
         <div class="card">
             <h1>Privacy Policy</h1>
-            <p class="subtitle">For Nirogyam version 2.2 &middot; Last updated: September 15, 2026</p>
+            <p class="subtitle">For Nirogyam version 2.3 &middot; Last updated: September 17, 2026</p>
 
             <div class="notice">
-                <p>Nirogyam has no advertising or third-party tracking. Your personal routine data is stored on your device. Version 2.2 offers optional basic usage sharing with PostHog for adult profiles, described below. Optional private iCloud backup sends profiles and practice history to your private iCloud account. You can also choose to export and share your data or a personal summary.</p>
+                <p>Nirogyam has no advertising or third-party tracking. Your personal routine data is stored on your device. Version 2.3 offers an optional one-time Routine Builder purchase processed by Apple and optional basic usage sharing with PostHog for adult profiles, described below. Optional private iCloud backup sends profiles and practice history to your private iCloud account. You can also choose to export and share your data or a personal summary.</p>
             </div>
 
             <h2>Overview</h2>
@@ -111,11 +111,12 @@
             <p>Depending on the features you use, Nirogyam stores the following locally:</p>
             <ul>
                 <li>profiles you create, including a name, adult or child profile type, authored order, and dosha assessment;</li>
-                <li>practice completions, routine progress, Garden state, reminder preferences, and app preferences;</li>
+                <li>practice completions, Routine Builder choices and progress, Garden state, reminder preferences, and app preferences;</li>
                 <li>journal entries you choose to write;</li>
                 <li>optional adult energy and calmness check-ins, including their date and daily or practice context; saved playback positions and appearance preferences;</li>
                 <li>manual sleep entries and local identifiers used to avoid suggesting the same Health walk again;</li>
                 <li>a local Product Research summary, described below; and</li>
+                <li>a locally cached, cryptographically verified Routine Builder entitlement used for offline access; and</li>
                 <li>temporary state needed for widgets, shortcuts, and app operation.</li>
             </ul>
             <p>Nirogyam does not require a Nirogyam account. Local app data is removed when you delete the app, subject to iOS behavior. A private iCloud backup, if present, is separate and may remain until you turn that feature off in the app.</p>
@@ -164,10 +165,13 @@
             <p>Anagh Tech does not collect Product Research export files automatically. Personal PDF and CSV summaries are separate from this internal research record. Deleting the app does not delete copies you have saved or shared elsewhere.</p>
 
             <h2>Internet and Apple Services</h2>
-            <p>The core routine, Garden, curated library, and on-device guidance work without an internet connection. Network access is used when private iCloud backup or restore communicates directly with Apple CloudKit, and for PostHog events if you enable optional usage sharing in an analytics-enabled build. Apple services are governed by Apple's own terms and privacy policy.</p>
+            <p>The core routine, Garden, curated library, on-device guidance and previously verified Routine Builder access work without an internet connection. Network access is used for Routine Builder purchase and restore requests through Apple StoreKit, when private iCloud backup or restore communicates directly with Apple CloudKit, and for PostHog events if you enable optional usage sharing in an analytics-enabled build. Apple services are governed by Apple's own terms and privacy policy.</p>
+
+            <h2>Routine Builder Purchase</h2>
+            <p>Routine Builder Sessions 2–21 can be unlocked through a non-consumable, one-time in-app purchase. Apple processes the transaction and provides Nirogyam with a signed entitlement result. Anagh Tech does not receive your payment-card number or Apple Account password. Nirogyam stores the verified entitlement locally so purchased sessions can remain available offline, and rechecks it with StoreKit when network access is available. You can restore the purchase from the purchase sheet or Settings.</p>
 
             <h2>Optional PostHog Usage Analytics</h2>
-            <p>Version 2.2 offers an optional “Help improve Nirogyam” switch during adult setup and in Settings &rarr; Data &amp; privacy. It is off by default. Declining does not limit app features.</p>
+            <p>Version 2.3 offers an optional “Help improve Nirogyam” switch during adult setup and in Settings &rarr; Data &amp; privacy. It is off by default. Declining does not limit app features.</p>
             <p>With your choice enabled and an adult profile active, Nirogyam sends basic events to PostHog to help Anagh Tech understand setup completion, feature use, and return visits. Events cover plan setup, main tab selection, practice-screen and guided-session actions, saved completion or Undo, Later/Skip, plan changes, explanation opens, reminder opens, and app activity. They include an event time, app version/build, and a randomly generated device-level analytics identifier. Multiple adult profiles on a device share this identifier. These events are pseudonymous, not fully anonymous.</p>
             <p>Events do not include your name, local profile identifiers or type, practice identifiers, assessment results or answers, HealthKit data, check-in values, sleep-derived signals, journals, AI text, notification contents, or advertising identifiers. Nirogyam does not record screens, touches, or sessions automatically. Child-profile and pre-consent activity is excluded and is not saved for later upload.</p>
             <p>The app requests that PostHog skip person-profile creation and IP-based location enrichment and sends an empty event IP property. PostHog necessarily receives the network source IP while servicing HTTPS requests. Its cloud infrastructure and processing are also described in <a href="https://posthog.com/privacy">PostHog’s privacy policy</a>.</p>
