@@ -45,6 +45,11 @@ The Cloudflare asset directory is organized by app:
 
 ```text
 cloudflare/public/
+  inside-india-living-publisher/
+    index.html
+    privacy.html
+    terms.html
+    style.css
   littleplot/
     index.html
     privacy.html
